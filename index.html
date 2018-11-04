@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/dist/favicon.ico" type="image/x-icon">
+    <title>tetris</title>
+    <style>
+        html, body {
+            margin:0;
+            padding:0;
+            position: relative;
+            overflow: hidden;
+        }
+        #loading {
+            height: 100vh;
+            width: 100vw;
+            background-color: #FFDD00;
+            position:absolute;
+            z-index: 20;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            transition: 1s;
+        }
+        #loading img {
+            display: block;
+            width:10%;
+            height: 10%;
+            min-width: 60px;
+            min-height: 60px;
+            animation: spin 1.4s ease-in-out infinite;
+        }
+        .animLoader {
+            transform: scale(4);
+            opacity: 0;
+        }
+        @keyframes spin {
+            from {
+                transform: rotate(0deg)
+            }
+            to {
+                transform: rotate(360deg)
+            }
+        }
+    </style>
+  </head>
+  <body>
+    <div id="loading" v-if="isLoading">
+        <img src="loading.svg" alt="loading">
+    </div>
+    <div id="app"></div>
+    <script src="/dist/build.js"></script>
+    <script>
+        window.onload=() => {
+            var loader=document.querySelector('#loading');
+            loader.classList.add('animLoader');
+            setTimeout(() => {
+               document.body.removeChild(loader)
+            }, 1000)   
+        }
+    </script>
+  </body>
+</html>
