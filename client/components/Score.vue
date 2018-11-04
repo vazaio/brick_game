@@ -28,26 +28,49 @@ export default {
         z-index: 10;
         width:100%;
         height: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
     #score div {
         display: block;
         width:80%;
         margin:10px 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: space-between;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
     }
     #score div span {
         display: block;
         font-size:5vh;
         color:#3b3b3b;
-        animation: flashing 2s steps(4, end) infinite;
-        box-sizing: border-box;
+        -webkit-animation: flashing 2s steps(4, end) infinite;
+                animation: flashing 2s steps(4, end) infinite;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
         border: 3px solid #3b3b3b;
         padding: 5px;
+    }
+    @-webkit-keyframes flashing {
+        form,to {
+            border: 3px solid #3b3b3b;
+        }
+        50% {
+            border: 3px solid rgba(0,0,0,0);
+        }
     }
     @keyframes flashing {
         form,to {

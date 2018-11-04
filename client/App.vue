@@ -337,11 +337,15 @@ export default {
 
 <style scoped>
     .gameBtn {
-        box-shadow: inset -2px -2px 8px 4px rgba(0,0,0,0.6);
+        -webkit-box-shadow: inset -2px -2px 8px 4px rgba(0,0,0,0.6);
+                box-shadow: inset -2px -2px 8px 4px rgba(0,0,0,0.6);
     }
     .activeBtn {
+        -webkit-transition:all .2s;
+        -o-transition:all .2s;
         transition:all .2s;
-        box-shadow: inset 4px 4px 8px 4px rgba(0,0,0,0.6);
+        -webkit-box-shadow: inset 4px 4px 8px 4px rgba(0,0,0,0.6);
+                box-shadow: inset 4px 4px 8px 4px rgba(0,0,0,0.6);
     }
     #about {
         display: none;
@@ -354,18 +358,34 @@ export default {
 		width:92%;
 		margin-left:4%;
 		direction: flex;
-		flex-direction: column;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
 	}
 	#backResetBtn {
 		width:100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
 	}
     #backResetBtn div {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
     .ellipsBtn {
         height: 1vh;
@@ -381,18 +401,31 @@ export default {
         margin-top:3px;
     }
 	#actionBtn {
+		display:-webkit-box;
+		display:-ms-flexbox;
 		display:flex;
-		justify-content: space-between;
+		-webkit-box-pack: justify;
+		    -ms-flex-pack: justify;
+		        justify-content: space-between;
 		width:100%;
 		height: 25vh;
 	}
     .arrowsBtn {
         width:30%;
         height:30%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         position: absolute;
     }
     .arrowsBtn div {
@@ -409,28 +442,45 @@ export default {
     #up {
         top:0;
         left:50%;
-        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+                transform: translateX(-50%);
     }
     #down {
         bottom:0;
         left:50%;
-        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+                transform: translateX(-50%);
     }
     #left {
         left:3%;
         top:50%;
-        transform: translateY(-38%);
+        -webkit-transform: translateY(-38%);
+            -ms-transform: translateY(-38%);
+                transform: translateY(-38%);
     }
     #right {
         right:3%;
         top:50%;
-        transform: translateY(-38%);
+        -webkit-transform: translateY(-38%);
+            -ms-transform: translateY(-38%);
+                transform: translateY(-38%);
     }
     #fire {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         width: 12vh; 
     }
     #fire div {
@@ -440,8 +490,12 @@ export default {
         background-color:#FFDD00;
     }
 	main {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
-		justify-content: center;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
 		height: 100vh; width: 100vw;
 		background-color:rgba(255,221,0,1);
 		overflow:hidden;
@@ -460,22 +514,41 @@ export default {
 		border:2px solid black;
 		width:43vh;
 		border-radius: 20px;
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
-		justify-content: center;
-		align-items: center;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
         overflow: hidden;
 	}
 	#box {
 		width: 96%;
 		height: 96%;
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
-		flex-direction: column; 
-		justify-content: center;
-		align-items: center;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column; 
+		-webkit-box-pack: center; 
+		    -ms-flex-pack: center; 
+		        justify-content: center;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
 		position: relative;
+		-webkit-transition: 1.2s steps(10,end);
+		-o-transition: 1.2s steps(10,end);
 		transition: 1.2s steps(10,end);
 	}
 	#box a {
+		-webkit-transition: inherit;
+		-o-transition: inherit;
 		transition: inherit;
 		text-decoration: none;
 	}
@@ -490,20 +563,32 @@ export default {
 		left:-30%;
 	}
     #gameIconSnake {
-        animation: gameSnakeGo 5s steps(20, end) infinite;
+        -webkit-animation: gameSnakeGo 5s steps(20, end) infinite;
+                animation: gameSnakeGo 5s steps(20, end) infinite;
     }
     #gameIconCars {
-        animation: gameCarsGo 5s steps(20, end) infinite;
+        -webkit-animation: gameCarsGo 5s steps(20, end) infinite;
+                animation: gameCarsGo 5s steps(20, end) infinite;
     }
     #gameIconScore {
-        animation: gameScoreGo 1s steps(2, end) infinite;
+        -webkit-animation: gameScoreGo 1s steps(2, end) infinite;
+                animation: gameScoreGo 1s steps(2, end) infinite;
     }
  	.menu {
 		position: absolute;
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
 		top:0;
 		left:0;
 		width: 100%;
@@ -522,9 +607,15 @@ export default {
 		bottom:1vh;
 		right: 2vw;
 		z-index: 10;
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
-		justify-content: center;
-		align-items: center;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
 	}
 	#keySettingsBtn img {
 		widows: 4vh;
@@ -538,26 +629,48 @@ export default {
 		z-index: 11;
 	}
 	#keyBox {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
-		align-items: center;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
 	}
 	#keyBox div {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
-		flex-direction: column;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
 		position: relative;
 	}
 	#keyBox span {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
 		color:#3b3b3b;
 		font-size: 20px;
 		margin-left:20px;
 	}
 	#keyBox div section {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
-		align-items: center;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
 	}
 	#keyBox div section span {
 		margin-left:0px;
@@ -587,6 +700,8 @@ export default {
 		text-align: center;
 		font-size:20px;
 		color:#3b3b3b;
+		-webkit-transition: .6s;
+		-o-transition: .6s;
 		transition: .6s;
 	}
 	.setTextSuccess {
@@ -594,6 +709,14 @@ export default {
 	}
 	.setTextFailure {
 		border: 1px solid lightcoral;
+	}
+	@-webkit-keyframes gameSnakeGo {
+		from, to {
+			left:-30%;
+		}
+		50% {
+			left:30%;
+		}
 	}
 	@keyframes gameSnakeGo {
 		from, to {
@@ -603,12 +726,28 @@ export default {
 			left:30%;
 		}
 	}
+    @-webkit-keyframes gameCarsGo {
+		from, to {
+			top:0%;
+		}
+		50% {
+			top:30%;
+		}
+	}
     @keyframes gameCarsGo {
 		from, to {
 			top:0%;
 		}
 		50% {
 			top:30%;
+		}
+	}
+    @-webkit-keyframes gameScoreGo {
+		from, to {
+			opacity: 1;
+		}
+		50% {
+			opacity: 0;
 		}
 	}
     @keyframes gameScoreGo {
