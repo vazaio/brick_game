@@ -1,18 +1,17 @@
-# tetris
+# Brick game
 
-> game project
+> Парочка игр
 
-## Build Setup
+## Для установки
 
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-```
-
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+1) Скопировать репозиторий на свою локальную машину
+-
+2) Запустить терминал и выбрать директорию, в которую загружен репозиторий
+-
+3) В терминале выполнить: npm i
+-
+4) Затем: npm run brick
+-
+5) Для настройки управления в нижнем правом углу есть меню настроек
+-
+6) Вспомнить детство
